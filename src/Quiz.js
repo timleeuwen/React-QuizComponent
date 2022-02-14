@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 
 let quizData = require('./quiz_data.json')
 
-class Quizz extends Component {
+class Quiz extends Component {
 
     constructor(props) {
+
         super(props)
 
         this.state = { quiz_position: 1 }
@@ -23,4 +24,4 @@ class Quizz extends Component {
 
 }
 
-export default Quizz
+export default Quiz
