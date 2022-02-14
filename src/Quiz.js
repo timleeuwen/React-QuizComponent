@@ -32,8 +32,8 @@ class Quiz extends Component {
     }
 
     showNextQuestion() {
-
-        this.setState((state) => { quiz_position: state.quiz_position + 1 });
+        let newVal = this.state.quiz_position + 1;
+        this.setState({ quiz_position: newVal });
 
     }
 
