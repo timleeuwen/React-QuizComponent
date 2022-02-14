@@ -24,13 +24,18 @@ class Quiz extends Component {
                     <QuizEnd /> :
                     null}
                 {!isQuizEnd ?
-                    <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} /> :
+                    <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} showNextQuestionHandler={this.showNextQuestion.bind(this)} /> :
                     null}
                 
             </div>
         )
     }
 
+    showNextQuestion() {
+
+        this.setState((state) => { quiz_position: state.quiz_position + 1 });
+
+    }
 
 
 }
